@@ -8,6 +8,7 @@ from threading import Thread
 from crawler import Crawler
 from options import parser
 
+""" http://lvyaojia.sinaapp.com/2012/10/python%E7%88%AC%E8%99%AB%E6%80%BB%E7%BB%93/ """
 
 def congifLogger(logFile, logLevel):
     '''配置logging的日志文件以及日志的记录等级'''
@@ -22,7 +23,8 @@ def congifLogger(logFile, logLevel):
     formatter = logging.Formatter(
         '%(asctime)s %(threadName)s %(levelname)s %(message)s')
     try:
-        # aabab
+        # http://docs.python.org/2/library/logging.handlers.html?highlight=filehandler#logging.FileHandler
+        # The FileHandler class, located in the core logging package, sends logging output to a disk file.
         fileHandler = logging.FileHandler(logFile)
     except IOError, e:
         return False
