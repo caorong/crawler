@@ -22,7 +22,7 @@ def congifLogger(logFile, logLevel):
     formatter = logging.Formatter(
         '%(asctime)s %(threadName)s %(levelname)s %(message)s')
     try:
-        # a
+        # aabab
         fileHandler = logging.FileHandler(logFile)
     except IOError, e:
         return False
